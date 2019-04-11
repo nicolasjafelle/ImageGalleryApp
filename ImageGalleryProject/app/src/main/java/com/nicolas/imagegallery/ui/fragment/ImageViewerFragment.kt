@@ -77,6 +77,7 @@ class ImageViewerFragment: AbstractFragment<ImageViewerFragment.Callback>(), Ima
         viewModel.viewStateData = ViewModelErrorProvider.handleError(viewLifecycleOwner, requireContext(), loadingView)
         viewModel.detailViewModel.observe(viewLifecycleOwner, Observer {
 
+            detailInfo.text = "${it.author} - ${it.camera}"
             imageViewerView.showImage(Uri.parse(it.fullUrl))
         })
 

@@ -2,6 +2,7 @@
 <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/black">
@@ -13,4 +14,15 @@
             app:optimizeDisplay="true"
             app:failureImage="@drawable/ic_placeholder"
             app:failureImageInitScaleType="center"/>
+
+    <TextView
+            android:id="@+id/detailInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/large_text"
+            android:background="@color/transparent"
+            android:padding="@dimen/base_separation"
+            android:layout_gravity="bottom|start"
+            tools:text="Nicolas Jafelle - Cannon as100"/>
 </FrameLayout>
