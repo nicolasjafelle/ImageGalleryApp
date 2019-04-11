@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImageGalleryDemo</string>
+
+    <string name="retry">RETRY</string>
+    <string name="connection_error">THERE WAS A PROBLEM WHILE CONNECTING</string>
+    <string name="refresh">REFRESH</string>
+    <string name="no_content">THERE IS NO CONTENT TO DISPLAY</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="connection_error_try_again">THERE WAS A PROBLEM WHILE CONNECTING! CHECK YOUR CONNECTION AND TRY AGAIN!</string>
+    <string name="problem_while_connecting">PROBLEM WHILE CONNECTING %1$d | %2$s</string>
+    <string name="no_connection">THERE IS NO AVAILABLE CONNECTION! TRY AGAIN LATER!</string>
+</resources>
