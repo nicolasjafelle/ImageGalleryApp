@@ -5,8 +5,11 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 28
+    buildToolsVersion "29.0.0-rc2"
+
     defaultConfig {
         applicationId "com.nicolas.imagegallery"
+        build
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
