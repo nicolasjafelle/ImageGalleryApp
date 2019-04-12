@@ -3,8 +3,10 @@ package com.nicolas.imagegallery.ui.adapter
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.nicolas.imagegallery.R
 import com.nicolas.imagegallery.domain.Picture
 import com.nicolas.imagegallery.extensions.loadImage
+import org.jetbrains.anko.backgroundResource
 
 
 class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -19,6 +21,7 @@ class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<Recycle
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         val imageView = ImageView(parent.context)
+        imageView.backgroundResource = R.color.grey_background
         return ItemViewHolder(imageView)
     }
 
@@ -47,7 +50,7 @@ class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<Recycle
 
         fun load(picture: Picture?) {
             picture?.let {
-                (itemView as ImageView).loadImage(picture.croppedUrl) // it means the class using it...
+                (itemView as ImageView).loadImage(picture.croppedUrl, R.drawable.ic_placeholder) // it means the class using it...
                 itemView.setOnClickListener { onItemClick(adapterPosition) }
             }
         }

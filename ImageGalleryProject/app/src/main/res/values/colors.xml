@@ -9,4 +9,5 @@
     <color name="red">#FF0000</color>
 
     <color name="transparent">#4D000000</color>
+    <color name="grey_background">#747474</color>
 </resources>

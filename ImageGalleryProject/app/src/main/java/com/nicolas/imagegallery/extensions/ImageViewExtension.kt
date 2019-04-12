@@ -19,43 +19,14 @@ fun ImageView.loadImage(url: String?, placeholder: Int? = null) {
             .placeholder(placeholder ?: R.drawable.ic_placeholder)
             .into(this)
 
-
-//        Picasso.get()
-//            .load(url)
-//            .fit()
-//            .centerCrop()
-//            .noFade()
-//            .placeholder(placeholder ?: R.drawable.ic_placeholder)
-//            .error(placeholder ?: R.drawable.ic_placeholder)
-//            .into(this)
 }
 
-//fun ImageView.loadImageFile(localPath: String?, placeholder: Int? = null) {
-//    if (localPath != null)
-//        Picasso.get()
-//            .load(File(localPath))
-//            .fit()
-//            .centerCrop()
-//            .error(placeholder ?: R.drawable.ic_placeholder)
-//            .into(this)
-//}
-//
-//fun ImageView.loadImage(url: String, downloaded: () -> Unit) {
-//
-//    val creator = Picasso.get()
-//        .load(url)
-//        .fit()
-//        .centerCrop()
-//        .noFade()
-//
-//    creator.into(this, object : Callback {
-//        override fun onSuccess() {
-//            downloaded()
-//        }
-//
-//        override fun onError(e: Exception?) {
-//            downloaded()
-//        }
-//    })
-//
-//}
+fun ImageView.loadImage(url: String?) {
+    if (url != null && url.isNotEmpty())
+
+        Glide.with(context)
+            .load(url)
+            .centerCrop()
+            .into(this)
+
+}
