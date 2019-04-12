@@ -8,7 +8,7 @@
             style="?android:indeterminateProgressStyle"
             android:layout_width="@dimen/loading_view_dimen"
             android:layout_height="@dimen/loading_view_dimen"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"/>
 
     <LinearLayout
             android:id="@+id/loading_view_linear_layout"
@@ -26,14 +26,14 @@
                 android:gravity="center"
                 android:textColor="@color/colorAccent"
                 android:text="@string/connection_error"
-                android:textSize="@dimen/xlarge_text" />
+                android:textSize="@dimen/xlarge_text"/>
 
         <Button
                 android:id="@+id/loading_view_retry_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/retry" />
+                android:text="@string/retry"/>
 
     </LinearLayout>
 

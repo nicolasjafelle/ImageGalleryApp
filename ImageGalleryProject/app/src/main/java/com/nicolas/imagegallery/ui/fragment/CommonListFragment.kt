@@ -15,7 +15,7 @@ import com.nicolas.imagegallery.viewmodel.ImageListViewModel
 import com.nicolas.imagegallery.viewmodel.ViewModelErrorProvider
 import kotlinx.android.synthetic.main.fragment_common_list.*
 
-class CommonListFragment: AbstractFragment<CommonListFragment.Callback>() {
+class CommonListFragment : AbstractFragment<CommonListFragment.Callback>() {
 
     lateinit var adapter: ImageAdapter
     lateinit var viewModel: ImageListViewModel
@@ -56,7 +56,7 @@ class CommonListFragment: AbstractFragment<CommonListFragment.Callback>() {
 //            shortToast("NUMBER OF ITEMS ${adapter.itemCount}")
         })
 
-        if(viewModel.listViewModel.value == null) {
+        if (viewModel.listViewModel.value == null) {
             viewModel.getImageList()
         }
 

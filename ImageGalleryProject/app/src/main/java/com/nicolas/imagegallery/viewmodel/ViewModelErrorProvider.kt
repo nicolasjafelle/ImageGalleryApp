@@ -13,10 +13,11 @@ import com.nicolas.imagegallery.viewmodel.event.EventObserver
 
 object ViewModelErrorProvider {
 
-    fun handleError(lifecycleOwner: LifecycleOwner,
-                    context: Context,
-                    loadingView: LoadingView? = null,
-                    onPreExecute: (() -> Unit)? = null
+    fun handleError(
+        lifecycleOwner: LifecycleOwner,
+        context: Context,
+        loadingView: LoadingView? = null,
+        onPreExecute: (() -> Unit)? = null
     ): MutableLiveData<Event<RestHttpAction>> {
 
         val viewStateData: MutableLiveData<Event<RestHttpAction>> = MutableLiveData()

@@ -3,9 +3,7 @@ package com.nicolas.imagegallery.extensions
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.nicolas.imagegallery.R
-import java.io.File
 
 /**
  * Created by nicolas on 11/10/17.

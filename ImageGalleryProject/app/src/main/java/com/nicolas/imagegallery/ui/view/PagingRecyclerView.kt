@@ -4,8 +4,6 @@ package com.nicolas.imagegallery.ui.view
 import android.content.Context
 import android.util.AttributeSet
 import android.util.Log
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
@@ -20,7 +18,7 @@ class PagingRecyclerView : RecyclerView {
     constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super(context, attrs, defStyle)
 
 
-    fun handleScroll( onLoadMore : () -> Unit) {
+    fun handleScroll(onLoadMore: () -> Unit) {
         this.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

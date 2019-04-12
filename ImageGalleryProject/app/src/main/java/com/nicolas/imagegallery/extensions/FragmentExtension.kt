@@ -1,7 +1,5 @@
 package com.nicolas.imagegallery.extensions
 
-import android.view.View
-import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment

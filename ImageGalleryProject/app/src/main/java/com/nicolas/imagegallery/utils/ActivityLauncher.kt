@@ -9,9 +9,11 @@ object ActivityLauncher {
 
     fun launchShareIntent(activity: Activity, pictureDetail: PictureDetail) {
 
-        val text = activity.getString(R.string.check_out_this_image_from,
+        val text = activity.getString(
+            R.string.check_out_this_image_from,
             pictureDetail.author,
-            pictureDetail.fullUrl)
+            pictureDetail.fullUrl
+        )
 
 
         val sharingIntent = Intent(Intent.ACTION_SEND)
@@ -19,8 +21,12 @@ object ActivityLauncher {
         sharingIntent.putExtra(Intent.EXTRA_SUBJECT, activity.getString(R.string.check_out_this_image))
         sharingIntent.putExtra(Intent.EXTRA_TEXT, text)
 
-        activity.startActivity(Intent.createChooser(sharingIntent,
-            activity.getString(R.string.select_app_to_share)))
+        activity.startActivity(
+            Intent.createChooser(
+                sharingIntent,
+                activity.getString(R.string.select_app_to_share)
+            )
+        )
     }
 
 }

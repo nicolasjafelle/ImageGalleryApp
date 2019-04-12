@@ -2,10 +2,10 @@
 <resources>
 
     <!--<style name="AppTheme.Launcher">-->
-        <!--<item name="android:windowBackground">@drawable/launch_screen</item>-->
+    <!--<item name="android:windowBackground">@drawable/launch_screen</item>-->
     <!--</style>-->
 
-    <style name="AppTheme" parent="BaseAppTheme" />
+    <style name="AppTheme" parent="BaseAppTheme"/>
 
     <style name="BaseAppTheme" parent="AppCompatTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -13,7 +13,6 @@
         <item name="colorAccent">@color/white</item>
         <item name="android:windowBackground">@color/black</item>
     </style>
-
 
 
     <style name="AppTheme.Fullscreen" parent="AppTheme">

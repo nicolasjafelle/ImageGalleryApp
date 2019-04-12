@@ -5,10 +5,9 @@ import android.content.Intent
 import androidx.core.app.ActivityCompat
 import com.nicolas.imagegallery.R
 import com.nicolas.imagegallery.domain.Picture
-import com.nicolas.imagegallery.extensions.shortToast
 import com.nicolas.imagegallery.ui.fragment.CommonListFragment
 
-class CommonListActivity: AbstractAppCompatActivity(), CommonListFragment.Callback {
+class CommonListActivity : AbstractAppCompatActivity(), CommonListFragment.Callback {
 
     companion object {
         fun launchActivity(activity: Activity) {

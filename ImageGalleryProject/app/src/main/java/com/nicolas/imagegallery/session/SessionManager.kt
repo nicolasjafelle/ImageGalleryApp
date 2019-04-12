@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.provider.Settings
 import android.util.Base64
-import com.google.gson.Gson
 import java.io.UnsupportedEncodingException
 import java.nio.charset.Charset
 import java.security.NoSuchAlgorithmException
@@ -135,7 +134,7 @@ class SessionManager(context: Context) {
         editor.remove(key)
         editor.commit()
     }
-    
+
     /**
      * Save token in a secure way
      */

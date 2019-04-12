@@ -7,24 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import kotlinx.android.synthetic.main.fragment_image_viewer.*
 import com.github.piasy.biv.BigImageViewer
+import com.github.piasy.biv.loader.ImageLoader
 import com.github.piasy.biv.loader.glide.GlideImageLoader
 import com.nicolas.imagegallery.ImageGalleryApplication
 import com.nicolas.imagegallery.R
-import com.github.piasy.biv.indicator.progresspie.ProgressPieIndicator
-import com.github.piasy.biv.loader.ImageLoader
 import com.nicolas.imagegallery.domain.PictureDetail
 import com.nicolas.imagegallery.ui.view.LoadingView
 import com.nicolas.imagegallery.viewmodel.ImageDetailViewModel
-import com.nicolas.imagegallery.viewmodel.ImageListViewModel
 import com.nicolas.imagegallery.viewmodel.ViewModelErrorProvider
-import org.jetbrains.anko.sdk27.coroutines.onClick
+import kotlinx.android.synthetic.main.fragment_image_viewer.*
 import java.io.File
-import java.lang.Exception
 
 
-class ImageViewerFragment: AbstractFragment<ImageViewerFragment.Callback>(), ImageLoader.Callback {
+class ImageViewerFragment : AbstractFragment<ImageViewerFragment.Callback>(), ImageLoader.Callback {
 
     lateinit var viewModel: ImageDetailViewModel
     lateinit var loadingView: LoadingView
@@ -82,8 +78,8 @@ class ImageViewerFragment: AbstractFragment<ImageViewerFragment.Callback>(), Ima
             imageViewerView.showImage(Uri.parse(it.fullUrl))
         })
 
-        if(viewModel.detailViewModel.value == null) {
-           fetchData()
+        if (viewModel.detailViewModel.value == null) {
+            fetchData()
         }
     }
 

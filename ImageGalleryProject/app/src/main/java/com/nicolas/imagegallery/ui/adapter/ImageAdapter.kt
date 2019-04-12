@@ -9,7 +9,7 @@ import com.nicolas.imagegallery.extensions.loadImage
 import org.jetbrains.anko.backgroundResource
 
 
-class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ImageAdapter(val onItemClick: (Int) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var itemList: MutableList<Picture> = emptyList<Picture>().toMutableList()
 
@@ -36,7 +36,7 @@ class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<Recycle
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when(holder) {
+        when (holder) {
             is ItemViewHolder -> {
                 holder.load(getItemAt(position))
             }
@@ -50,7 +50,10 @@ class ImageAdapter(val onItemClick: (Int) -> Unit): RecyclerView.Adapter<Recycle
 
         fun load(picture: Picture?) {
             picture?.let {
-                (itemView as ImageView).loadImage(picture.croppedUrl, R.drawable.ic_placeholder) // it means the class using it...
+                (itemView as ImageView).loadImage(
+                    picture.croppedUrl,
+                    R.drawable.ic_placeholder
+                ) // it means the class using it...
                 itemView.setOnClickListener { onItemClick(adapterPosition) }
             }
         }

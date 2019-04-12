@@ -8,7 +8,7 @@ import com.nicolas.imagegallery.viewmodel.ViewModelErrorProvider
 import com.nicolas.imagegallery.viewmodel.event.EventObserver
 import kotlinx.android.synthetic.main.fragment_starter.*
 
-class StarterFragment: AbstractFragment<StarterFragment.Callback>() {
+class StarterFragment : AbstractFragment<StarterFragment.Callback>() {
 
     lateinit var viewModel: AuthViewModel
 
@@ -42,7 +42,7 @@ class StarterFragment: AbstractFragment<StarterFragment.Callback>() {
         viewModel.authLiveData.observe(viewLifecycleOwner, EventObserver {
             val success = viewModel.storeCredentials(requireContext(), it.token)
 
-            if(success){
+            if (success) {
                 loadingView.dismiss()
                 callback?.onContinue()
             }

@@ -8,7 +8,7 @@ import com.nicolas.imagegallery.repository.AppRepo
 import com.nicolas.imagegallery.session.SessionManager
 import com.nicolas.imagegallery.viewmodel.event.Event
 
-class AuthViewModel: CoroutineViewModel() {
+class AuthViewModel : CoroutineViewModel() {
 
     val authLiveData: MutableLiveData<Event<AuthResponse>> = MutableLiveData()
 

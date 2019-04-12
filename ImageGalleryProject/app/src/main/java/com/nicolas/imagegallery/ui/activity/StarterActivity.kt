@@ -13,9 +13,9 @@ class StarterActivity : AbstractAppCompatActivity(), StarterFragment.Callback {
 
 
     override fun setInitialFragment() {
-        if(application.isLogged()) {
+        if (application.isLogged()) {
             onContinue()
-        }else {
+        } else {
             setInitialFragment(StarterFragment.newInstance())
         }
     }

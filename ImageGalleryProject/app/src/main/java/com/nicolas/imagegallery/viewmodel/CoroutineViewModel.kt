@@ -7,18 +7,19 @@ import com.nicolas.imagegallery.viewmodel.action.RestHttpAction
 import com.nicolas.imagegallery.viewmodel.callback.BasicCallback
 import com.nicolas.imagegallery.viewmodel.event.Event
 import kotlinx.coroutines.*
-import java.lang.Exception
 
-open class CoroutineViewModel: ViewModel() {
+open class CoroutineViewModel : ViewModel() {
     lateinit var viewStateData: MutableLiveData<Event<RestHttpAction>>
     var singleCallback: BasicCallback? = null
     var job: Job? = null
     val exceptionHandler = RestHttpExceptionHandler()
 
 
-    fun executeInBackground(onBackgroundTask: () -> Any,
-                            onSuccess: (response: Any?) -> Unit,
-                            callback: BasicCallback? = null) {
+    fun executeInBackground(
+        onBackgroundTask: () -> Any,
+        onSuccess: (response: Any?) -> Unit,
+        callback: BasicCallback? = null
+    ) {
 
         singleCallback = callback
 
@@ -54,7 +55,7 @@ open class CoroutineViewModel: ViewModel() {
                         return@async null
                     }
                 }
-            }catch (e: Exception) {
+            } catch (e: Exception) {
                 e.printStackTrace()
             }
         }

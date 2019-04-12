@@ -3,7 +3,7 @@ package com.nicolas.imagegallery
 import android.app.Application
 import com.nicolas.imagegallery.session.SessionManager
 
-class ImageGalleryApplication: Application() {
+class ImageGalleryApplication : Application() {
 
     companion object {
         lateinit var instance: ImageGalleryApplication
@@ -22,7 +22,6 @@ class ImageGalleryApplication: Application() {
         SessionManager(baseContext).clear()
         return true
     }
-
 
 
 }

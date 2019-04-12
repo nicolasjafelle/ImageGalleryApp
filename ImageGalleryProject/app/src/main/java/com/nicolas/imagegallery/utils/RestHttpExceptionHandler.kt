@@ -17,7 +17,8 @@ import kotlin.coroutines.CoroutineContext
 /**
  * Created by nicolas on 11/30/17.
  */
-class RestHttpExceptionHandler : CoroutineExceptionHandler, AbstractCoroutineContextElement(CoroutineExceptionHandler.Key) {
+class RestHttpExceptionHandler : CoroutineExceptionHandler,
+    AbstractCoroutineContextElement(CoroutineExceptionHandler.Key) {
 
 
     override fun handleException(context: CoroutineContext, exception: Throwable) {
