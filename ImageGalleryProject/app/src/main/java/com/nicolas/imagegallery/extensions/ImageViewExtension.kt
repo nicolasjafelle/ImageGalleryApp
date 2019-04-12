@@ -2,6 +2,8 @@ package com.nicolas.imagegallery.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.nicolas.imagegallery.R
 import java.io.File
 
@@ -17,6 +19,7 @@ fun ImageView.loadImage(url: String?, placeholder: Int? = null) {
             .load(url)
             .centerCrop()
             .placeholder(placeholder ?: R.drawable.ic_placeholder)
+            .diskCacheStrategy(DiskCacheStrategy.DATA)
             .into(this)
 
 }

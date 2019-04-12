@@ -15,14 +15,31 @@
             app:failureImage="@drawable/ic_placeholder"
             app:failureImageInitScaleType="center"/>
 
-    <TextView
-            android:id="@+id/detailInfo"
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/large_text"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:background="@color/transparent"
-            android:padding="@dimen/base_separation"
-            android:layout_gravity="bottom|start"
-            tools:text="Nicolas Jafelle - Cannon as100"/>
+            android:layout_gravity="bottom|start">
+        <TextView
+                android:id="@+id/detailInfo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/large_text"
+                android:padding="@dimen/base_separation"
+                tools:text="Nicolas Jafelle - Cannon as100"/>
+
+        <ImageButton
+                android:id="@+id/shareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share"
+                android:padding="@dimen/base_separation"
+                android:background="@drawable/bg_common_item_drawable"/>
+    </LinearLayout>
+
+
 </FrameLayout>

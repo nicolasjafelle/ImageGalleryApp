@@ -19,6 +19,7 @@ import com.nicolas.imagegallery.ui.view.LoadingView
 import com.nicolas.imagegallery.viewmodel.ImageDetailViewModel
 import com.nicolas.imagegallery.viewmodel.ImageListViewModel
 import com.nicolas.imagegallery.viewmodel.ViewModelErrorProvider
+import org.jetbrains.anko.sdk27.coroutines.onClick
 import java.io.File
 import java.lang.Exception
 
@@ -88,6 +89,12 @@ class ImageViewerFragment: AbstractFragment<ImageViewerFragment.Callback>(), Ima
 
     override fun setListeners() {
         //Do nothing...
+        shareButton.setOnClickListener {
+            viewModel.detailViewModel.value?.let {
+                callback?.onShareImage(it)
+            }
+
+        }
     }
 
     private fun fetchData() {
