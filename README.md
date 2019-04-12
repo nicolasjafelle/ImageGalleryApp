@@ -9,7 +9,7 @@ Just another Kotlin playground project. This time is a small Image Gallery app.
 * minSdkVersion 19
 * targetSdkVersion 28
 
-## Instalation
+## Installation
 In Android Studio 3.4 RC3 go to:
 1. `File`
 2. `New`
