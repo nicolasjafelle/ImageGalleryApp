@@ -9,6 +9,15 @@ Just another Kotlin playground project. This time is a small Image Gallery app.
 * minSdkVersion 19
 * targetSdkVersion 28
 
+## Project Setup
+In Android Studio 3.4 RC3 go to:
+1. `File`
+2. `New`
+3. `Import Project...`
+4. Select `ImageGalleryProject` inside `ImageGalleryApp` directory
+5. Click `OK` Button
+6. Wait till gradle resolve and download all the dependencies
+
 ## Developed By
 
 * Nicolas Jafelle - <nicolasjafelle@gmail.com>
