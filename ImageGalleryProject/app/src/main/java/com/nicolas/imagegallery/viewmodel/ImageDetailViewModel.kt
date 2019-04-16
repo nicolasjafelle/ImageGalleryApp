@@ -17,7 +17,6 @@ class ImageDetailViewModel : CoroutineViewModel() {
                     AppRepo.getImageDetails(pos),
                     ImageDetailResponse::class.java
                 )
-
             },
             onSuccess = {
                 if (it is ImageDetailResponse) {
@@ -26,6 +25,7 @@ class ImageDetailViewModel : CoroutineViewModel() {
                     }
                 }
             })
+
     }
 
 }
