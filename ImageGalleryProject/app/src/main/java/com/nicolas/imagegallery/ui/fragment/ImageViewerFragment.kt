@@ -43,7 +43,6 @@ class ImageViewerFragment : AbstractFragment<ImageViewerFragment.Callback>(), Im
             return f
         }
 
-//        fun newInstance() = ImageViewerFragment()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

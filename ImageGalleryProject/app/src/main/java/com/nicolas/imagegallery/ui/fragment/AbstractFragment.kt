@@ -32,7 +32,7 @@ abstract class AbstractFragment<T> : Fragment() {
     override fun onAttach(context: Context?) {
         super.onAttach(context)
         try {
-            callback = context as T
+            callback = context as? T
         } catch (e: ClassCastException) {
             throw ClassCastException(context.toString() + " must implement Callback interface")
         }

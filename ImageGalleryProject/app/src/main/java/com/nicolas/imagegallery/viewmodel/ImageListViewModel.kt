@@ -31,7 +31,7 @@ class ImageListViewModel : CoroutineViewModel() {
                     AppRepo.getImageList(currentPage),
                     ImageListResponse::class.java
                 )
-                
+
             },
             onSuccess = {
                 if (it is ImageListResponse) {
